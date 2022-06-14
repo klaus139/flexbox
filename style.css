@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+    --font_primary: "lexend-Deca", sans-serif;
+    --font_secondary: "Big Shoulders Display", cursive;
+
+    --bright_orange: hsl(9, 87%, 49%);
+    --dark_cyan: hsl(184, 100%, 22%);
+    --very_dark_cyan: hsl(241, 100%, 13%);
+    --transparent_white: hsla(0, 0%, 100%, 0.75);
+    --very_light_gray: hsl(0, 0%, 95%);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    color:inherit;
+    cursor: pointer;
+}
+
+.btn-primary{
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 32px;
+    background-color: white;
+    border: 2px solid white;
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-color: white;
+    
+}
+
+#app {
+    display: grid;
+    place-content: center;
+    padding-block: 74px;
+    background-color: var(--very_light_gray);
+    margin-top: 90px;
+}
+
+.card {
+    width: min(92vw, 330px);
+    font-family: var(--font_primary);
+    padding: 56px 40px;
+    color: #fff;
+}
+
+.card:nth-child(1){
+    background-color: rgb(212, 140, 7);
+    border-radius: 6px 6px 0 0;
+}
+
+.card:nth-child(1) .btn-primary {
+    color: rgb(212, 140, 7);
+}
+  
+.card:nth-child(2) {
+    background-color: var(--dark_cyan);
+}
+  
+.card:nth-child(2) .btn-primary {
+    color: var(--dark_cyan);
+}
+  
+.card:nth-child(3) {
+    background-color: rgb(28, 53, 47);
+    border-radius: 0 0 6px 6px;
+}
+  
+.card:nth-child(3) .btn-primary {
+    color: var(--very_dark_cyan);
+}
+
+.card-image {
+    margin-bottom: 8px;
+}
+.card-title {
+    font-size: 36px;
+    font-family: var(--font_secondary);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    color: var(--very_light_gray);
+  }
+
+.card-content {
+    color: var(--transparent_white);
+    line-height: 1.7;
+    margin-bottom: clamp(23px,
+    calc(1.4375rem + ((1vw - 3.75px) * 10.0486)),
+    85px );
+}
+.card:nth-child(1) {
+    border-radius: 6px 0 0 6px;
+}
+.card:nth-child(2) {
+    border-radius: 6px 0 0 6px;
+}
+
+  .card:nth-child(3) {
+    border-radius: 0 6px 6px 0;
+}
+#app {
+    height: 600px;
+    grid-auto-flow: column;
+    padding-block: 0;
+    display: flex;
+}
